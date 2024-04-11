@@ -43,3 +43,15 @@ main {
   padding-right: 3rem;
   padding-left: 3rem;
 }
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.buttonst {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}

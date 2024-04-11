@@ -1,36 +1,26 @@
-// // let arr = ["Diyor", "Shoxrux", "Akhror", "Asror"];
+import getData from "./getData.js";
+getData("http://localhost:3000/tracks")
+  .then((data) => {
+    console.log(data);
+    updateUI(data);
+  })
+  .catch((error) => {
+    console.log(error.message);
+  });
 
-// // let result = [];
+const updateUI = (data) => {
+  const title = document.querySelector("h2");
+  const title2 = document.querySelector("h4");
+  console.log(data);
 
-// // result = arr.filter((frend) => {
-// //   return frend === "Diyor";
-// // });
+  data.map((item) => {
+    title.innerHTML += item.title;
+    title2.innerHTML += " " + item.timeframes.weekly.previous + "hrs";
+    dailyBtn.addEventListener("click", () => {
+      title2.textContent = "";
+      title2.innerHTML += " " + item.timeframes.weekly.current + "hrs";
+    });
+  });
+};
 
-// // console.log(result);
-
-// const sortFunction = (arr) => {
-//   let zeroCount = 0;
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] === 0) {
-//       arr.splice(i, 1);
-//       zeroCount++;
-//       i--;
-//     }
-//   }
-
-//   for (let i = 0; i < zeroCount; i++) {
-//     arr.push(0);
-//   }
-//   return arr;
-// };
-
-// const arr = [5, 0, 8, 2, 4, 1];
-
-// const result = sortFunction(arr);
-
-// console.log(result);
-
-// const str = " Hello there thanks for trying my Kata";
-
-// const resoult = str.trim();
-// console.log(resoult);
+const dailyBtn = document.getElementById("daily");
