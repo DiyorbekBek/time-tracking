@@ -55,3 +55,49 @@ main {
   display: flex;
   justify-content: space-between;
 }
+
+.list-item {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 255px 255px 255px 255px;
+  grid-template-rows: 244px 244px;
+  gap: 30px;
+}
+
+.item {
+  color: aliceblue;
+  font-size: 25px;
+  border-radius: 16px;
+}
+
+.item-1 {
+  background-color: rgb(28, 32, 75);
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.item-2 {
+  background-color: rgb(63, 212, 150);
+}
+.item-3 {
+  background-color: rgb(35, 35, 56);
+}
+.item-4 {
+  background-color: rgb(235, 46, 93);
+}
+.item-5 {
+  background-color: rgb(134, 134, 39);
+}
+.item-6 {
+  background-color: rgb(111, 111, 123);
+}
+.item-7 {
+  background-color: rgb(36, 40, 42);
+}
+
+.item-1__header {
+  border-radius: 15px;
+  width: inherit;
+  height: 354px;
+  background-color: rgb(87, 71, 234);
+  padding: 32px;
+}

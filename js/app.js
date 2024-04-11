@@ -18,7 +18,6 @@ const updateUI = (data) => {
     title2.innerHTML += " " + item.timeframes.weekly.previous + "hrs";
     dailyBtn.addEventListener("click", () => {
       title2.textContent = "";
-      title2.innerHTML += " " + item.timeframes.weekly.current + "hrs";
     });
   });
 };
