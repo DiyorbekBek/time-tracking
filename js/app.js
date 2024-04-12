@@ -10,16 +10,16 @@ getData("http://localhost:3000/tracks")
 
 const updateUI = (data) => {
   const title = document.querySelector("h2");
-  const title2 = document.querySelector("h4");
-  console.log(data);
+//   const title2 = document.querySelector("h4");
+//   console.log(data);
 
-  data.map((item) => {
-    title.innerHTML += item.title;
-    title2.innerHTML += " " + item.timeframes.weekly.previous + "hrs";
-    dailyBtn.addEventListener("click", () => {
-      title2.textContent = "";
-    });
-  });
-};
+//   data.map((item) => {
+//     title.innerHTML += item.title;
+//     title2.innerHTML += " " + item.timeframes.weekly.previous + "hrs";
+//     dailyBtn.addEventListener("click", () => {
+//       title2.textContent = "";
+//     });
+//   });
+// };
 
-const dailyBtn = document.getElementById("daily");
+// const dailyBtn = document.getElementById("daily");
